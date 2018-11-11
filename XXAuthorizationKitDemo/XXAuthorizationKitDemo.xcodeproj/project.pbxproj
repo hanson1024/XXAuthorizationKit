@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B19B93DA21953684008A7E54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B93D921953684008A7E54 /* AppDelegate.m */; };
-		B19B93DD21953684008A7E54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B93DC21953684008A7E54 /* ViewController.m */; };
-		B19B93E021953684008A7E54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19B93DE21953684008A7E54 /* Main.storyboard */; };
 		B19B93E221953685008A7E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B19B93E121953685008A7E54 /* Assets.xcassets */; };
 		B19B93E521953685008A7E54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19B93E321953685008A7E54 /* LaunchScreen.storyboard */; };
 		B19B93E821953685008A7E54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B93E721953685008A7E54 /* main.m */; };
 		B19B93F221953686008A7E54 /* XXAuthorizationKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B93F121953686008A7E54 /* XXAuthorizationKitDemoTests.m */; };
 		B19B93FD21953686008A7E54 /* XXAuthorizationKitDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B93FC21953686008A7E54 /* XXAuthorizationKitDemoUITests.m */; };
+		B19B940D219536E8008A7E54 /* XXCLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B940B219536E8008A7E54 /* XXCLLocationManager.m */; };
+		B19B9410219537F3008A7E54 /* XXAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B940F219537F3008A7E54 /* XXAuthorizationViewController.m */; };
+		B19B9413219538C2008A7E54 /* XXAuthorizationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B9412219538C2008A7E54 /* XXAuthorizationModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +39,6 @@
 		B19B93D521953684008A7E54 /* XXAuthorizationKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XXAuthorizationKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19B93D821953684008A7E54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B19B93D921953684008A7E54 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B19B93DB21953684008A7E54 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B19B93DC21953684008A7E54 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B19B93DF21953684008A7E54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B19B93E121953685008A7E54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B19B93E421953685008A7E54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B19B93E621953685008A7E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +49,12 @@
 		B19B93F821953686008A7E54 /* XXAuthorizationKitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XXAuthorizationKitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19B93FC21953686008A7E54 /* XXAuthorizationKitDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXAuthorizationKitDemoUITests.m; sourceTree = "<group>"; };
 		B19B93FE21953686008A7E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B19B940B219536E8008A7E54 /* XXCLLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCLLocationManager.m; sourceTree = "<group>"; };
+		B19B940C219536E8008A7E54 /* XXCLLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCLLocationManager.h; sourceTree = "<group>"; };
+		B19B940E219537F3008A7E54 /* XXAuthorizationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXAuthorizationViewController.h; sourceTree = "<group>"; };
+		B19B940F219537F3008A7E54 /* XXAuthorizationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXAuthorizationViewController.m; sourceTree = "<group>"; };
+		B19B9411219538C2008A7E54 /* XXAuthorizationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXAuthorizationModel.h; sourceTree = "<group>"; };
+		B19B9412219538C2008A7E54 /* XXAuthorizationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXAuthorizationModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,13 @@
 		B19B93D721953684008A7E54 /* XXAuthorizationKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B19B940A219536E8008A7E54 /* XXCLLocationManager */,
 				B19B93D821953684008A7E54 /* AppDelegate.h */,
 				B19B93D921953684008A7E54 /* AppDelegate.m */,
-				B19B93DB21953684008A7E54 /* ViewController.h */,
-				B19B93DC21953684008A7E54 /* ViewController.m */,
-				B19B93DE21953684008A7E54 /* Main.storyboard */,
+				B19B940E219537F3008A7E54 /* XXAuthorizationViewController.h */,
+				B19B940F219537F3008A7E54 /* XXAuthorizationViewController.m */,
+				B19B9411219538C2008A7E54 /* XXAuthorizationModel.h */,
+				B19B9412219538C2008A7E54 /* XXAuthorizationModel.m */,
 				B19B93E121953685008A7E54 /* Assets.xcassets */,
 				B19B93E321953685008A7E54 /* LaunchScreen.storyboard */,
 				B19B93E621953685008A7E54 /* Info.plist */,
@@ -130,6 +136,15 @@
 				B19B93FE21953686008A7E54 /* Info.plist */,
 			);
 			path = XXAuthorizationKitDemoUITests;
+			sourceTree = "<group>";
+		};
+		B19B940A219536E8008A7E54 /* XXCLLocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				B19B940B219536E8008A7E54 /* XXCLLocationManager.m */,
+				B19B940C219536E8008A7E54 /* XXCLLocationManager.h */,
+			);
+			path = XXCLLocationManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +252,6 @@
 			files = (
 				B19B93E521953685008A7E54 /* LaunchScreen.storyboard in Resources */,
 				B19B93E221953685008A7E54 /* Assets.xcassets in Resources */,
-				B19B93E021953684008A7E54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B19B93DD21953684008A7E54 /* ViewController.m in Sources */,
+				B19B9413219538C2008A7E54 /* XXAuthorizationModel.m in Sources */,
 				B19B93E821953685008A7E54 /* main.m in Sources */,
 				B19B93DA21953684008A7E54 /* AppDelegate.m in Sources */,
+				B19B940D219536E8008A7E54 /* XXCLLocationManager.m in Sources */,
+				B19B9410219537F3008A7E54 /* XXAuthorizationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +316,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B19B93DE21953684008A7E54 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B19B93DF21953684008A7E54 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B19B93E321953685008A7E54 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
