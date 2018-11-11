@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+UIKIT_EXTERN NSString *const XXAuthorizationCellIdentifier;
+
 typedef NS_ENUM(NSInteger, AuthorizationModelType) {
     AuthorizationModelTypeLocation = 0,                         // no button type
     AuthorizationModelTypeCoreBlue
@@ -33,21 +35,3 @@ typedef NS_ENUM(NSInteger, AuthorizationModelType) {
 
 @end
 
-@implementation XXAuthorizationCell
-
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
-    
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        
-        
-    }
-    return self;
-}
-
--(void)setModel:(XXAuthorizationModel *)model {
-    
-    _model = model;
-    self.textLabel.text = model.title;
-}
-
-@end

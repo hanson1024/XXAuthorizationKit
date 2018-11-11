@@ -8,6 +8,28 @@
 
 #import "XXAuthorizationModel.h"
 
+NSString *const XXAuthorizationCellIdentifier = @"XXAuthorizationCellIdentifier";
+
 @implementation XXAuthorizationModel
+
+@end
+
+
+@implementation XXAuthorizationCell
+
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        
+        
+    }
+    return self;
+}
+
+-(void)setModel:(XXAuthorizationModel *)model {
+    
+    _model = model;
+    self.textLabel.text = model.title;
+}
 
 @end

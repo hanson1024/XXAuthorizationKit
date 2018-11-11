@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B136D4252197EC56007ACFE8 /* XXAuthorizationOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B136D4242197EC56007ACFE8 /* XXAuthorizationOperationViewController.m */; };
+		B136D4382197F014007ACFE8 /* NSObject+ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B136D4372197F014007ACFE8 /* NSObject+ObjectMap.m */; };
 		B19B93DA21953684008A7E54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B93D921953684008A7E54 /* AppDelegate.m */; };
 		B19B93E221953685008A7E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B19B93E121953685008A7E54 /* Assets.xcassets */; };
 		B19B93E521953685008A7E54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19B93E321953685008A7E54 /* LaunchScreen.storyboard */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B136D4232197EC56007ACFE8 /* XXAuthorizationOperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXAuthorizationOperationViewController.h; sourceTree = "<group>"; };
+		B136D4242197EC56007ACFE8 /* XXAuthorizationOperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXAuthorizationOperationViewController.m; sourceTree = "<group>"; };
+		B136D4362197F014007ACFE8 /* NSObject+ObjectMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectMap.h"; sourceTree = "<group>"; };
+		B136D4372197F014007ACFE8 /* NSObject+ObjectMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectMap.m"; sourceTree = "<group>"; };
 		B19B93D521953684008A7E54 /* XXAuthorizationKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XXAuthorizationKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19B93D821953684008A7E54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B19B93D921953684008A7E54 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B136D4352197F014007ACFE8 /* Ver */ = {
+			isa = PBXGroup;
+			children = (
+				B136D4362197F014007ACFE8 /* NSObject+ObjectMap.h */,
+				B136D4372197F014007ACFE8 /* NSObject+ObjectMap.m */,
+			);
+			path = Ver;
+			sourceTree = "<group>";
+		};
 		B19B93CC21953683008A7E54 = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +120,14 @@
 		B19B93D721953684008A7E54 /* XXAuthorizationKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B136D4352197F014007ACFE8 /* Ver */,
 				B19B940A219536E8008A7E54 /* XXCLLocationManager */,
 				B19B93D821953684008A7E54 /* AppDelegate.h */,
 				B19B93D921953684008A7E54 /* AppDelegate.m */,
 				B19B940E219537F3008A7E54 /* XXAuthorizationViewController.h */,
 				B19B940F219537F3008A7E54 /* XXAuthorizationViewController.m */,
+				B136D4232197EC56007ACFE8 /* XXAuthorizationOperationViewController.h */,
+				B136D4242197EC56007ACFE8 /* XXAuthorizationOperationViewController.m */,
 				B19B9411219538C2008A7E54 /* XXAuthorizationModel.h */,
 				B19B9412219538C2008A7E54 /* XXAuthorizationModel.m */,
 				B19B93E121953685008A7E54 /* Assets.xcassets */,
@@ -141,8 +159,8 @@
 		B19B940A219536E8008A7E54 /* XXCLLocationManager */ = {
 			isa = PBXGroup;
 			children = (
-				B19B940B219536E8008A7E54 /* XXCLLocationManager.m */,
 				B19B940C219536E8008A7E54 /* XXCLLocationManager.h */,
+				B19B940B219536E8008A7E54 /* XXCLLocationManager.m */,
 			);
 			path = XXCLLocationManager;
 			sourceTree = "<group>";
@@ -209,6 +227,7 @@
 		B19B93CD21953683008A7E54 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XX;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = hanson;
 				TargetAttributes = {
@@ -277,9 +296,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B19B9413219538C2008A7E54 /* XXAuthorizationModel.m in Sources */,
+				B136D4382197F014007ACFE8 /* NSObject+ObjectMap.m in Sources */,
 				B19B93E821953685008A7E54 /* main.m in Sources */,
 				B19B93DA21953684008A7E54 /* AppDelegate.m in Sources */,
 				B19B940D219536E8008A7E54 /* XXCLLocationManager.m in Sources */,
+				B136D4252197EC56007ACFE8 /* XXAuthorizationOperationViewController.m in Sources */,
 				B19B9410219537F3008A7E54 /* XXAuthorizationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

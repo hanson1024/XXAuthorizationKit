@@ -7,18 +7,33 @@
 //
 
 #import "XXAuthorizationViewController.h"
+#import "XXAuthorizationOperationViewController.h"
 
-@interface XXAuthorizationViewController ()
+#import "NSObject+ObjectMap.h"
+
+@interface XXAuthorizationViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+/** <#注释#> */
+@property (nonatomic, strong) UITableView *tableView;
+
+/** <#注释#> */
+@property (nonatomic, strong) NSMutableArray <XXAuthorizationModel *>*dataSource;
 
 @end
 
 @implementation XXAuthorizationViewController
+
+#pragma mark - life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.title = @"XXAuthorization";
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self pri_handleParams];
+    [self pri_setupTableView];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -26,6 +41,57 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark - public methods
+#pragma - mark
+#pragma mark - private methods 添加 pri_ 前缀
+
+-(void)pri_handleParams {
+    
+    NSArray *dateSource = @[@{@"VC":@"XXAuthorizationOperationViewController",
+                              @"type":[NSNumber numberWithUnsignedInteger:AuthorizationModelTypeLocation],
+                              @"title":@"XXCLLocationManager"},
+                            @{@"VC":@"XXAuthorizationOperationViewController",
+                              @"type":[NSNumber numberWithUnsignedInteger:AuthorizationModelTypeLocation],
+                              @"title":@"XXCLLocationManager"}];
+    
+    _dataSource = [NSMutableArray arrayWithCapacity:dateSource.count];
+    
+    for (NSDictionary *dict in dateSource) {
+        
+        XXAuthorizationModel *model = [XXAuthorizationModel objectOfClass:@"XXAuthorizationModel" fromJSON:dict];
+        [_dataSource addObject:model];
+        
+    }
+}
+
+
+-(void)pri_setupTableView {
+    
+    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    [_tableView registerClass:NSClassFromString(@"XXAuthorizationCell") forCellReuseIdentifier:XXAuthorizationCellIdentifier];
+    [self.view addSubview:_tableView];
+}
+#pragma - mark
+#pragma mark - delegate
+#pragma mark - tableViewDelegate
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return [_dataSource count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    XXAuthorizationCell *cell = [tableView dequeueReusableCellWithIdentifier:XXAuthorizationCellIdentifier forIndexPath:indexPath];
+    cell.model = [_dataSource objectAtIndex:indexPath.row];
+    return cell;
+}
+
+#pragma mark - event response
+#pragma - mark
+#pragma mark - lazy loading
 
 /*
 #pragma mark - Navigation
