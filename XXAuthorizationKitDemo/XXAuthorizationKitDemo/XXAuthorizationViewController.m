@@ -53,8 +53,8 @@
                               @"type":[NSNumber numberWithUnsignedInteger:AuthorizationModelTypeLocation],
                               @"title":@"XXCLLocationManager"},
                             @{@"VC":@"XXAuthorizationOperationViewController",
-                              @"type":[NSNumber numberWithUnsignedInteger:AuthorizationModelTypeLocation],
-                              @"title":@"XXCLLocationManager"}];
+                              @"type":[NSNumber numberWithUnsignedInteger:AuthorizationModelTypeCoreBlue],
+                              @"title":@"XXCoreBlueManager"}];
     
     _dataSource = [NSMutableArray arrayWithCapacity:dateSource.count];
     
@@ -71,6 +71,8 @@
     
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [_tableView registerClass:NSClassFromString(@"XXAuthorizationCell") forCellReuseIdentifier:XXAuthorizationCellIdentifier];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
     [self.view addSubview:_tableView];
 }
 #pragma - mark
@@ -87,6 +89,19 @@
     XXAuthorizationCell *cell = [tableView dequeueReusableCellWithIdentifier:XXAuthorizationCellIdentifier forIndexPath:indexPath];
     cell.model = [_dataSource objectAtIndex:indexPath.row];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    XXAuthorizationModel *model = [_dataSource objectAtIndex:indexPath.row];
+    
+    if ([@"XXAuthorizationOperationViewController" isEqualToString:model.VC]) {
+        
+        XXAuthorizationOperationViewController *VC = [NSClassFromString([_dataSource objectAtIndex:indexPath.row].VC) new];
+        
+        [self.navigationController pushViewController:VC animated:YES];
+    }
+    
 }
 
 #pragma mark - event response

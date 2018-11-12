@@ -21,7 +21,7 @@ typedef NS_ENUM(NSInteger, AuthorizationModelType) {
 /** <#注释#> */
 @property (nonatomic, copy) NSString *VC;
 /** <#注释#> */
-@property (nonatomic, copy) NSString *type;
+@property (nonatomic, assign) AuthorizationModelType type;
 /** <#注释#> */
 @property (nonatomic, copy) NSString *title;
 

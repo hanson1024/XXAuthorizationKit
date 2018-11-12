@@ -8,7 +8,12 @@
 
 #import "XXAuthorizationOperationViewController.h"
 
+#import "XXCLLocationManager/XXCLLocationManager.h"
+
 @interface XXAuthorizationOperationViewController ()
+
+/** <#注释#> */
+@property (nonatomic, strong) XXCLLocationManager *locationManager;
 
 @end
 
@@ -18,6 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
 }
 
@@ -35,6 +42,19 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    if (self.model.type == AuthorizationModelTypeLocation) {
+        if ([XXCLLocationManager isLocationUpdatesAvailable]) {
+            _locationManager = [XXCLLocationManager startUpdatingLocationWithUpdateBlock:^(NSDictionary *locationParams) {
+                NSLog(@"locationParams = %@",locationParams);
+            }];
+        }
+    }else if (self.model.type == AuthorizationModelTypeCoreBlue) {
+        
+    }
 }
 
 #pragma mark - public methods
