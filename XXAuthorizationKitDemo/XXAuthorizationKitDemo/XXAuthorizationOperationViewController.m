@@ -9,12 +9,14 @@
 #import "XXAuthorizationOperationViewController.h"
 
 #import "XXCLLocationManager/XXCLLocationManager.h"
+#import "XXCoreBlueManager/XXCoreBlueManager.h"
 
 @interface XXAuthorizationOperationViewController ()
 
 /** <#注释#> */
 @property (nonatomic, strong) XXCLLocationManager *locationManager;
-
+/** <#注释#> */
+@property (nonatomic, strong) XXCoreBlueManager *coreBlueManager;
 @end
 
 @implementation XXAuthorizationOperationViewController
@@ -53,7 +55,9 @@
             }];
         }
     }else if (self.model.type == AuthorizationModelTypeCoreBlue) {
-        
+        _coreBlueManager = [XXCoreBlueManager startUpdatingCoreBlueWithUpdateBlock:^(CBManagerState coreBlueStatus) {
+            NSLog(@"coreBlueStatus = %zd",coreBlueStatus);
+        }];
     }
 }
 

@@ -98,7 +98,7 @@
     if ([@"XXAuthorizationOperationViewController" isEqualToString:model.VC]) {
         
         XXAuthorizationOperationViewController *VC = [NSClassFromString([_dataSource objectAtIndex:indexPath.row].VC) new];
-        
+        VC.model = model;
         [self.navigationController pushViewController:VC animated:YES];
     }
     

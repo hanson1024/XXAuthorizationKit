@@ -11,7 +11,7 @@
 
 typedef void(^XXCLLocationManagerUpdateParamsBlock)(NSDictionary *locationParams);
 
-@interface XXCLLocationManager : CLLocationManager
+@interface XXCLLocationManager : NSObject
 
 @property (nonatomic, copy) XXCLLocationManagerUpdateParamsBlock updateBlock;
 

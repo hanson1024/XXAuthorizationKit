@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B10571FC21991BC20062B80A /* XXCoreBlueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B10571FB21991BC20062B80A /* XXCoreBlueManager.m */; };
 		B136D4252197EC56007ACFE8 /* XXAuthorizationOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B136D4242197EC56007ACFE8 /* XXAuthorizationOperationViewController.m */; };
 		B136D4382197F014007ACFE8 /* NSObject+ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B136D4372197F014007ACFE8 /* NSObject+ObjectMap.m */; };
 		B19B93DA21953684008A7E54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B19B93D921953684008A7E54 /* AppDelegate.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B10571FA21991BC20062B80A /* XXCoreBlueManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXCoreBlueManager.h; sourceTree = "<group>"; };
+		B10571FB21991BC20062B80A /* XXCoreBlueManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXCoreBlueManager.m; sourceTree = "<group>"; };
 		B136D4232197EC56007ACFE8 /* XXAuthorizationOperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXAuthorizationOperationViewController.h; sourceTree = "<group>"; };
 		B136D4242197EC56007ACFE8 /* XXAuthorizationOperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXAuthorizationOperationViewController.m; sourceTree = "<group>"; };
 		B136D4362197F014007ACFE8 /* NSObject+ObjectMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectMap.h"; sourceTree = "<group>"; };
@@ -88,13 +91,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B136D4352197F014007ACFE8 /* Ver */ = {
+		B10571F921991BA50062B80A /* XXCoreBlueManager */ = {
+			isa = PBXGroup;
+			children = (
+				B10571FA21991BC20062B80A /* XXCoreBlueManager.h */,
+				B10571FB21991BC20062B80A /* XXCoreBlueManager.m */,
+			);
+			path = XXCoreBlueManager;
+			sourceTree = "<group>";
+		};
+		B136D4352197F014007ACFE8 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
 				B136D4362197F014007ACFE8 /* NSObject+ObjectMap.h */,
 				B136D4372197F014007ACFE8 /* NSObject+ObjectMap.m */,
 			);
-			path = Ver;
+			path = Vendors;
 			sourceTree = "<group>";
 		};
 		B19B93CC21953683008A7E54 = {
@@ -120,8 +132,9 @@
 		B19B93D721953684008A7E54 /* XXAuthorizationKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				B136D4352197F014007ACFE8 /* Ver */,
+				B136D4352197F014007ACFE8 /* Vendors */,
 				B19B940A219536E8008A7E54 /* XXCLLocationManager */,
+				B10571F921991BA50062B80A /* XXCoreBlueManager */,
 				B19B93D821953684008A7E54 /* AppDelegate.h */,
 				B19B93D921953684008A7E54 /* AppDelegate.m */,
 				B19B940E219537F3008A7E54 /* XXAuthorizationViewController.h */,
@@ -297,6 +310,7 @@
 			files = (
 				B19B9413219538C2008A7E54 /* XXAuthorizationModel.m in Sources */,
 				B136D4382197F014007ACFE8 /* NSObject+ObjectMap.m in Sources */,
+				B10571FC21991BC20062B80A /* XXCoreBlueManager.m in Sources */,
 				B19B93E821953685008A7E54 /* main.m in Sources */,
 				B19B93DA21953684008A7E54 /* AppDelegate.m in Sources */,
 				B19B940D219536E8008A7E54 /* XXCLLocationManager.m in Sources */,
